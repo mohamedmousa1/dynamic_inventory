@@ -31,8 +31,6 @@ def get_instances():
             private_ip = instance.get('PrivateIpAddress')
             tags = {tag['Key']: tag['Value'] for tag in instance.get('Tags', [])}
             alias = tags.get('Name', instance_id)
-
-            # تحديد الجروب من التاج "group"، أو افتراضي
             group_name = tags.get('group', 'ungrouped')
 
             if group_name not in inventory:
