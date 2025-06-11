@@ -1,0 +1,17 @@
+- name: play1
+  hosts: all
+  vars:
+    name: mousa
+  tasks:
+
+    - name: print alias
+      debug:
+        msg: '{{ inventory_hostname }}'
+    - name: print groups_names
+      debug:
+        msg: "{{ group_names }}"
+
+    - name: print groups web1
+      debug:
+        msg: "{{ groups[group_names[0]] }}"
+

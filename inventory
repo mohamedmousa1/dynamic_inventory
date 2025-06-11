@@ -1,0 +1,8 @@
+node1 ansible_connection=local ansible_become_password=123  test=gas
+node2 ansible_host=192.168.245.149 ansible_ssh_user=mousa ansible_ssh_password=123 ansible_become_password=123 test=gas
+
+[web]
+node1
+
+[db]
+node2
